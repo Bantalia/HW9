@@ -59,8 +59,8 @@ public class Main {
                 System.out.println(" " + dayFor + " день/дня Вы можете оставить автомобиль.");
             }
         }
-        //Задача 4.1
-        System.out.println("Task 4.1");
+        //Задача 4
+        System.out.println("Task 4");
         int month = 0;
         double total = 0;
         while (true) {
@@ -68,9 +68,10 @@ public class Main {
             total = total + 15_000;
             if (month % 6 == 0) {
                 total = total * 1.07;
-                if (total >= 12_000_000) {
+                {
                     System.out.printf(total + " Накоплено за " + month);
                 }
+                if (total >= 12_000_000)
                 {
                     System.out.printf(total + "Достигнута цель " + month);
                     break;
@@ -78,26 +79,9 @@ public class Main {
             }
 
         }
-//Задача 4.2
-        System.out.println("Task 4.2 do-while");
-        int monthDo = 0;
-        double totalDo = 0;
-        do {
-            monthDo++;
-            totalDo = totalDo + 15_000;
-            if (monthDo % 6 == 0) {
-                totalDo = totalDo * 1.07;
-            }
-            {
-                System.out.printf(totalDo + " Накоплено за " + monthDo);
-            }
-        } while (totalDo >= 12_000_000);
 
-        {
-            System.out.printf(totalDo + "Достигнута цель " + monthDo);
-        }
         //Задача 5
-        System.out.println("Task 5 do-while");
+        System.out.println("Task 5 ");
         int charge = 20;
         int minute = 0;
         int overheats = 0;
