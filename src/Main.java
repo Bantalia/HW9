@@ -21,14 +21,12 @@ public class Main {
         int marathon = 42195;
         for (; distance < marathon; distance += 500) {
             int finishIn = marathon - distance;
-            {
-                System.out.println("Держитесь! Осталось " + finishIn + " метров");
-            }
+            System.out.println("Держитесь! Осталось " + finishIn + " метров");
         }
 //Задача 3.1
         System.out.println("Task 3.1");
         int sumBudget = 1000;
-        int day = 1;
+        int day = 0;
         int daysWhile = 0;
         while (sumBudget > 0) {
             day++;
@@ -37,27 +35,27 @@ public class Main {
             }
             sumBudget -= 100;
             if (sumBudget < 0) break;
-            day++;
-            daysWhile++;
             {
-                System.out.println(" " + day + " день/дня Вы можете оставить автомобиль.");
+                daysWhile++;
             }
+            System.out.println(" " + day + " день/дня Вы можете оставить автомобиль.");
         }
 //Задача 3.2 for
         System.out.println("Task 3.1 for");
         int sumBudgetFor = 1000;
         int dayFor = 0;
+        int daysWhileFor = 0;
         for (int currentDay = 1; ; currentDay++) {
             if (currentDay % 5 == 0) {
                 continue;
             }
             sumBudgetFor -= 100;
             if (sumBudgetFor < 0) break;
-            dayFor++;
-
             {
-                System.out.println(" " + dayFor + " день/дня Вы можете оставить автомобиль.");
+                dayFor++;
             }
+            System.out.println(" " + dayFor + " день/дня Вы можете оставить автомобиль.");
+
         }
         //Задача 4
         System.out.println("Task 4");
@@ -68,18 +66,13 @@ public class Main {
             total = total + 15_000;
             if (month % 6 == 0) {
                 total = total * 1.07;
-                {
-                    System.out.printf(total + " Накоплено за " + month);
-                }
-                if (total >= 12_000_000)
-                {
-                    System.out.printf(total + "Достигнута цель " + month);
-                    break;
-                }
+                System.out.println(total + " Накоплено за " + month);
             }
-
+            if (total >= 12_000_000) {
+                System.out.println(total + "Достигнута цель " + month);
+                break;
+            }
         }
-
         //Задача 5
         System.out.println("Task 5 ");
         int charge = 20;
@@ -89,24 +82,22 @@ public class Main {
             minute++;
             charge = charge + 2;
             if (minute % 10 == 0) {
-                {
-                    System.out.println(" Случился перегрев " + overheats);
-                }
+
+                System.out.println(" Случился перегрев " + overheats);
                 overheats++;
                 minute += 2;
                 continue;
             }
 
-            {
                 System.out.println("Заряд" + charge + "%");
-            }
+
             if (overheats == 3) {
                 break;
             }
         }
-        {
+
             System.out.println(" Зарядка прекращена. Текущий заряд " + charge + " % ");
-        }
+
 
 
     }
