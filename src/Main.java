@@ -79,6 +79,7 @@ public class Main {
         int minute = 0;
         int overheats = 0;
         while (charge < 100 && overheats <= 3) {
+
             minute++;
             charge = charge + 2;
             if (minute % 10 == 0) {
@@ -97,7 +98,7 @@ public class Main {
         }
 
             System.out.println(" Зарядка прекращена. Текущий заряд " + charge + " % ");
-
+        System.out.println(minute  + " минут , Oбщее время, потраченное на процесс. ");
 
 
     }
