@@ -34,12 +34,14 @@ public class Main {
                 continue;
             }
             sumBudget -= 100;
-            if (sumBudget < 0) break;
-            {
-                daysWhile++;
+            if (sumBudget < 0) {
+                break;
             }
+            daysWhile++;
             System.out.println(" " + day + " день/дня Вы можете оставить автомобиль.");
         }
+
+
 //Задача 3.2 for
         System.out.println("Task 3.1 for");
         int sumBudgetFor = 1000;
@@ -50,12 +52,11 @@ public class Main {
                 continue;
             }
             sumBudgetFor -= 100;
-            if (sumBudgetFor < 0) break;
-            {
-                dayFor++;
+            if (sumBudgetFor < 0) {
+                break;
             }
+            dayFor++;
             System.out.println(" " + dayFor + " день/дня Вы можете оставить автомобиль.");
-
         }
         //Задача 4
         System.out.println("Task 4");
@@ -70,9 +71,12 @@ public class Main {
             }
             if (total >= 12_000_000) {
                 System.out.println(total + "Достигнута цель " + month);
-                break;
+                {
+                    break;
+                }
             }
         }
+
         //Задача 5
         System.out.println("Task 5 ");
         int charge = 20;
@@ -90,17 +94,17 @@ public class Main {
                 continue;
             }
 
-                System.out.println("Заряд" + charge + "%");
+            System.out.println("Заряд" + charge + "%");
 
             if (overheats == 3) {
+
                 break;
             }
-        }
-
             System.out.println(" Зарядка прекращена. Текущий заряд " + charge + " % ");
-        System.out.println(minute  + " минут , Oбщее время, потраченное на процесс. ");
-
+            System.out.println(minute + " минут , Oбщее время, потраченное на процесс. ");
+        }
 
     }
 
 }
+
